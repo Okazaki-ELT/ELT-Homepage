@@ -90,17 +90,9 @@ export default function App() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => scrollToSection('home')}>
-              {/* Replace placeholder with uploaded image */}
-              <img 
-                src="ELT_logo_201907_color.jpg" 
-                alt="ELT Logo" 
-                className="h-10 w-auto mr-3"
-                onError={(e) => {
-                  e.target.style.display = 'none'; // Hide if image not found
-                  // You can add a fallback visual here if needed
-                }}
-              />
-              {/* Fallback/Text Logo is kept for branding clarity alongside the logo image */}
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+                <span className="text-white font-bold text-xl">E</span>
+              </div>
               <span className="font-bold text-2xl tracking-tighter text-gray-900 dark:text-white">
                 ELT<span className="text-blue-600">.</span>Inc
               </span>
@@ -425,18 +417,9 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center mb-4">
-                 {/* Footer Logo */}
-                 <img 
-                  src="ELT_logo_201907_color.jpg" 
-                  alt="ELT Logo" 
-                  className="h-8 w-auto mr-2 rounded-lg"
-                  onError={(e) => e.target.style.display = 'none'}
-                />
-                <span className="font-bold text-2xl tracking-tighter text-white">
-                  ELT<span className="text-blue-600">.</span>Inc
-                </span>
-              </div>
+              <span className="font-bold text-2xl tracking-tighter text-white block mb-4">
+                ELT<span className="text-blue-600">.</span>Inc
+              </span>
               <p className="text-sm max-w-xs mx-auto sm:mx-0">
                 ネットワーク技術と最新のAI/Web技術を融合させ、企業のインフラと業務プロセスを進化させるテクノロジーパートナー。
               </p>
